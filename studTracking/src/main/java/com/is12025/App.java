@@ -11,7 +11,7 @@ public class App {
     public static void main(String[] args) {
         // Configurar el puerto del servidor
         port(4567);
-        LOG.info("servidor  en: 4567");
+        LOG.info("servidor    en: 4567");
 
         // Definir rutas
         get("/", (req, res) -> "¡Bienvenido al servidor Spark!");
