@@ -1,0 +1,8 @@
+ebean:
+  db:
+    default:
+      driver: org.sqlite.JDBC
+      username: ""
+      password: ""
+      url: jdbc:sqlite:./mydb.sqlite
+      platform: sqlite
