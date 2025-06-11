@@ -1,3 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
 <project xmlns="http://maven.apache.org/POM/4.0.0"
          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
@@ -16,7 +17,10 @@
         <maven.compiler.target>11</maven.compiler.target>
         <spark-core.version>2.9.4</spark-core.version>
         <junit.version>4.13.2</junit.version>
-        <slf4j.version>2.0.13</slf4j.version> <logback.version>1.5.6</logback.version> <activejdbc.version>3.5</activejdbc.version>             <h2.version>2.2.224</h2.version>                         </properties>
+        <slf4j.version>2.0.13</slf4j.version>
+        <logback.version>1.5.6</logback.version>
+        <h2.version>2.2.224</h2.version>
+    </properties>
 
     <dependencies>
         <dependency>
@@ -51,21 +55,11 @@
         </dependency>
 
         <dependency>
-            <groupId>org.javalite</groupId>
-            <artifactId>activejdbc</artifactId>
-            <version>${activejdbc.version}</version>
-        </dependency>
-        <dependency>
-            <groupId>org.javalite</groupId>
-            <artifactId>activejdbc-javassist</artifactId>
-            <version>${activejdbc.version}</version>
-        </dependency>
-        <dependency>
             <groupId>com.h2database</groupId>
             <artifactId>h2</artifactId>
             <version>${h2.version}</version>
         </dependency>
-        </dependencies>
+    </dependencies>
 
     <build>
         <plugins>
@@ -98,20 +92,6 @@
                     <source>${maven.compiler.source}</source>
                     <target>${maven.compiler.target}</target>
                 </configuration>
-            </plugin>
-
-            <plugin>
-                <groupId>org.javalite</groupId>
-                <artifactId>activejdbc-maven-plugin</artifactId>
-                <version>${activejdbc.version}</version>
-                <executions>
-                    <execution>
-                        <phase>process-classes</phase>
-                        <goals>
-                            <goal>instrument</goal>
-                        </goals>
-                    </execution>
-                </executions>
             </plugin>
         </plugins>
     </build>
